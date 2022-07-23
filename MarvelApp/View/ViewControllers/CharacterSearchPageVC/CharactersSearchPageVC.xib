@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CharactersSearchPageVC" customModule="MarvelApp" customModuleProvider="target">
+            <connections>
+                <outlet property="charactersResultCollectionView" destination="uqM-mo-vxN" id="4SQ-qU-btc"/>
+                <outlet property="recentSearchesTableView" destination="XgC-df-S5l" id="Oo3-M6-6Ab"/>
+                <outlet property="searchBarTextField" destination="lBX-pt-Aya" id="c6R-hU-chC"/>
+                <outlet property="searchBarTextFieldHeightConstraint" destination="0Kx-NV-dkI" id="Tpr-lE-yEg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="lBX-pt-Aya">
+                    <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="ePF-eM-gMA"/>
+                    </constraints>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="XgC-df-S5l">
+                    <rect key="frame" x="0.0" y="88" width="414" height="150"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="0Kx-NV-dkI"/>
+                    </constraints>
+                </tableView>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="uqM-mo-vxN">
+                    <rect key="frame" x="0.0" y="238" width="414" height="624"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="TTD-0S-sbY">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="uqM-mo-vxN" secondAttribute="trailing" id="2UM-Ed-eTH"/>
+                <constraint firstItem="XgC-df-S5l" firstAttribute="top" secondItem="lBX-pt-Aya" secondAttribute="bottom" id="2vi-ql-TR1"/>
+                <constraint firstItem="lBX-pt-Aya" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="AW4-Ww-CJ0"/>
+                <constraint firstItem="lBX-pt-Aya" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Lnc-1S-Vng"/>
+                <constraint firstItem="uqM-mo-vxN" firstAttribute="top" secondItem="XgC-df-S5l" secondAttribute="bottom" id="QMZ-8E-Awf"/>
+                <constraint firstItem="lBX-pt-Aya" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Tzd-Yf-lMW"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="uqM-mo-vxN" secondAttribute="bottom" id="akb-wA-ovP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="XgC-df-S5l" secondAttribute="trailing" id="b5j-wB-hW6"/>
+                <constraint firstItem="uqM-mo-vxN" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="oX8-rI-3wT"/>
+                <constraint firstItem="XgC-df-S5l" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rAq-WZ-kqE"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="101.78571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
